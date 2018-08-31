@@ -13,12 +13,12 @@
         <!--Quotes-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="HomeViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote0" translatesAutoresizingMaskIntoConstraints="NO" id="6ha-xu-2Vx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote0" translatesAutoresizingMaskIntoConstraints="NO" id="6ha-xu-2Vx" customClass="Home">
                                 <rect key="frame" x="16" y="106" width="343" height="366"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS4-py-FjH">
@@ -28,6 +28,9 @@
                                     <constraint firstAttribute="height" constant="50" id="5D5-cc-Ynn"/>
                                 </constraints>
                                 <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="previousclicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YYC-8i-QwB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRR-Ao-93D">
                                 <rect key="frame" x="309" y="533" width="50" height="50"/>
@@ -36,6 +39,9 @@
                                     <constraint firstAttribute="height" constant="50" id="JXL-Zt-SAX"/>
                                 </constraints>
                                 <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="nextclicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mCk-Wi-Hbk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwE-mZ-1mz">
                                 <rect key="frame" x="162" y="533" width="50" height="50"/>
@@ -44,6 +50,9 @@
                                     <constraint firstAttribute="width" constant="50" id="wNb-P8-sJD"/>
                                 </constraints>
                                 <state key="normal" image="favourite"/>
+                                <connections>
+                                    <action selector="favouriteClicked:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iZg-qC-hec"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Quotes" image="quotes" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="quoteImgView" destination="6ha-xu-2Vx" id="sPb-Da-9wE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +82,7 @@
         <!--Favvourites-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="FavouriteViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,6 +114,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favvourites" image="star" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="favouriteImgView" destination="iwj-id-HcX" id="Tit-zC-Ac2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
