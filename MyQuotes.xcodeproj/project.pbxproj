@@ -13,6 +13,7 @@
 		E53EE2B9213708990099106C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E53EE2B7213708990099106C /* LaunchScreen.storyboard */; };
 		E53EE2C12137C2020099106C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53EE2C02137C2020099106C /* HomeViewController.swift */; };
 		E53EE2C321392DD10099106C /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53EE2C221392DD00099106C /* FavouriteViewController.swift */; };
+		E53EE2C5213934B20099106C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53EE2C4213934B20099106C /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E53EE2BA213708990099106C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E53EE2C02137C2020099106C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E53EE2C221392DD00099106C /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		E53EE2C4213934B20099106C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				E53EE2BA213708990099106C /* Info.plist */,
 				E53EE2C02137C2020099106C /* HomeViewController.swift */,
 				E53EE2C221392DD00099106C /* FavouriteViewController.swift */,
+				E53EE2C4213934B20099106C /* SettingsViewController.swift */,
 			);
 			path = MyQuotes;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				E53EE2AD213708980099106C /* AppDelegate.swift in Sources */,
 				E53EE2C321392DD10099106C /* FavouriteViewController.swift in Sources */,
 				E53EE2C12137C2020099106C /* HomeViewController.swift in Sources */,
+				E53EE2C5213934B20099106C /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

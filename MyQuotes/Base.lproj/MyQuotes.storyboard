@@ -125,7 +125,7 @@
         <!--Settings-->
         <scene sceneID="IvR-6B-bKy">
             <objects>
-                <viewController id="dPR-zf-C36" sceneMemberID="viewController">
+                <viewController id="dPR-zf-C36" customClass="SettingsViewController" customModule="MyQuotes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rop-Sx-Uq3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,10 +145,13 @@
                                     <constraint firstAttribute="height" constant="27" id="mDA-at-SEs"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Dark"/>
+                                    <segment title="Light"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedChanges:" destination="dPR-zf-C36" eventType="valueChanged" id="R2U-CQ-82I"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Border" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QK-Sl-6eD">
                                 <rect key="frame" x="91" y="283" width="193" height="33"/>
@@ -166,6 +169,9 @@
                                 </constraints>
                                 <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="thumbTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="dPR-zf-C36" eventType="valueChanged" id="GiA-rs-6yk"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Favourite Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXG-SX-d5D">
                                 <rect key="frame" x="91" y="380" width="193" height="33"/>
@@ -220,6 +226,15 @@
                         <viewLayoutGuide key="safeArea" id="eZM-Zn-eG8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="3Xc-sf-TcX"/>
+                    <connections>
+                        <outlet property="segmentedTheme" destination="8e6-dw-VD7" id="gzA-2Y-t9e"/>
+                        <outlet property="stepperFavourite" destination="lic-VD-Vsx" id="pbO-8s-2e2"/>
+                        <outlet property="switchBorder" destination="FcJ-08-rgu" id="hi5-SL-HUW"/>
+                        <outletCollection property="settingsLabels" destination="rBu-wi-LQM" collectionClass="NSMutableArray" id="Icb-yS-KRx"/>
+                        <outletCollection property="settingsLabels" destination="0vZ-Ft-QbT" collectionClass="NSMutableArray" id="w4o-iB-WN3"/>
+                        <outletCollection property="settingsLabels" destination="3QK-Sl-6eD" collectionClass="NSMutableArray" id="Pgk-MW-t9n"/>
+                        <outletCollection property="settingsLabels" destination="LXG-SX-d5D" collectionClass="NSMutableArray" id="ng8-XG-LpX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kuh-mE-8oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

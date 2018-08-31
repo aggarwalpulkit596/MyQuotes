@@ -13,6 +13,7 @@ class FavouriteViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.backgroundColor = theme
         let savingDefaults = UserDefaults.standard
         let indexSaved = savingDefaults.integer(forKey: "favourite")
         

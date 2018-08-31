@@ -8,6 +8,8 @@
 
 import UIKit
 
+var theme : UIColor = UIColor.black
+
 class HomeViewController: UIViewController {
     
     var quoteArray = ["quote0","quote1","quote2","quote3","quote4","quote5","quote6","quote7","quote8","quote9"]
@@ -16,6 +18,10 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.backgroundColor = theme
     }
     @IBOutlet weak var quoteImgView: UIImageView!
     
