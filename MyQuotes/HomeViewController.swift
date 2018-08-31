@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     
     var quoteArray = ["quote0","quote1","quote2","quote3","quote4","quote5","quote6","quote7","quote8","quote9"]
     var arrayIndex = 0
+    let defaults = UserDefaults.standard
 
 
     override func viewDidLoad() {
@@ -22,6 +23,14 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.backgroundColor = theme
+        let themeValue = defaults.integer(forKey: "theme")
+        if themeValue == 0
+        {
+            view.backgroundColor = UIColor.black
+        }
+        else{
+            view.backgroundColor = UIColor.white
+        }
     }
     @IBOutlet weak var quoteImgView: UIImageView!
     
