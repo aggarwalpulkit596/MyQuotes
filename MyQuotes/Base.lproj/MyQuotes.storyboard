@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote0" translatesAutoresizingMaskIntoConstraints="NO" id="6ha-xu-2Vx" customClass="Home">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quote0" translatesAutoresizingMaskIntoConstraints="NO" id="6ha-xu-2Vx" customClass="Home">
                                 <rect key="frame" x="16" y="106" width="343" height="366"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS4-py-FjH">
@@ -73,6 +73,9 @@
                     <tabBarItem key="tabBarItem" title="Quotes" image="quotes" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="quoteImgView" destination="6ha-xu-2Vx" id="sPb-Da-9wE"/>
+                        <outletCollection property="homeButtons" destination="oS4-py-FjH" collectionClass="NSMutableArray" id="RnM-Gu-RiE"/>
+                        <outletCollection property="homeButtons" destination="jwE-mZ-1mz" collectionClass="NSMutableArray" id="3ZD-Pa-J7Z"/>
+                        <outletCollection property="homeButtons" destination="bRR-Ao-93D" collectionClass="NSMutableArray" id="trD-g3-nUb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -162,7 +165,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FcJ-08-rgu">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FcJ-08-rgu">
                                 <rect key="frame" x="164" y="324" width="49" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="SmQ-H9-JDr"/>

@@ -29,6 +29,17 @@ class FavouriteViewController: UIViewController {
         else{
             view.backgroundColor = UIColor.white
         }
+        if imageBorder
+        {
+            favouriteImgView.layer.borderColor = UIColor.red.cgColor
+            favouriteImgView.layer.borderWidth = 5.0
+        }
+        else
+        {
+            favouriteImgView.layer.borderWidth = 0.0
+        }
+        favouriteImgView.clipsToBounds = true
+        favouriteImgView.layer.cornerRadius = 5.0
     }
     
     override func viewDidLoad() {

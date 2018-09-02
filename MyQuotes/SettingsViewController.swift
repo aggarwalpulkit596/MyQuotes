@@ -70,6 +70,12 @@ class SettingsViewController: UIViewController {
 
     
     @IBAction func switchChanged(_ sender: Any) {
+        if switchBorder.isOn
+        {
+            imageBorder = true
+        }else{
+            imageBorder = false
+        }
     }
 
     func changeTheme(tintcolor: UIColor)

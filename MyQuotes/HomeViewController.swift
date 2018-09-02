@@ -9,6 +9,7 @@
 import UIKit
 
 var theme : UIColor = UIColor.black
+var imageBorder = false
 
 class HomeViewController: UIViewController {
     
@@ -16,7 +17,8 @@ class HomeViewController: UIViewController {
     var arrayIndex = 0
     let defaults = UserDefaults.standard
 
-
+    @IBOutlet var homeButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,10 +29,22 @@ class HomeViewController: UIViewController {
         if themeValue == 0
         {
             view.backgroundColor = UIColor.black
+            setButtonBorder(color: .white)
         }
         else{
             view.backgroundColor = UIColor.white
+            setButtonBorder(color: .black)
         }
+        if imageBorder
+        {
+            quoteImgView.layer.borderColor = UIColor.red.cgColor
+            quoteImgView.layer.borderWidth = 5.0
+        }
+        else
+        {
+            quoteImgView.layer.borderWidth = 0.0
+        }
+        quoteImgView.layer.cornerRadius = 5.0
     }
     @IBOutlet weak var quoteImgView: UIImageView!
     
@@ -59,6 +73,15 @@ class HomeViewController: UIViewController {
             let imageName = quoteArray[arrayIndex]
             let quoteImage = UIImage(named: imageName)
             quoteImgView.image = quoteImage
+        }
+    }
+    func setButtonBorder(color: UIColor){
+        
+        for buttons in homeButtons
+        {
+            buttons.layer.cornerRadius = 25.0
+            buttons.layer.borderWidth = 3.5
+            buttons.layer.borderColor = color.cgColor
         }
     }
 }
